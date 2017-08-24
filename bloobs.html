@@ -17,15 +17,18 @@
 
   <script type = "text/babel">
 
-    class Bloobs extends React.Component {
+  class Bloobs extends React.Component {
       render() {
         var bloobsHeader = {
-          width: 200,
-          height: 100,
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
           background: "indigo"
         }
         return(
-          <h1 style={bloobsHeader}>Bloobs, it begins..</h1>
+          <h1 style={bloobsHeader}>Bloobs. life's a fruit, pick it.</h1>
         );
       }
     }
@@ -36,6 +39,7 @@
       </div>,
       document.getElementById("app")
     );
+
   </script>
 </body>
 </html>
