@@ -27,6 +27,20 @@
         return(
           <div style={bloobs}>
             <Header name={props.name}/>
+            <Search/>
+          </div>
+        );
+  }
+
+  function Search(props)  {
+    const search = {
+      backgroundColor: 'indigo',
+      height: '100%',
+      width: '100%',
+      textAlign: 'center'
+    }
+        return(
+          <div style={search}>
             <SearchBar/>
             <UPickButton/>
           </div>
