@@ -17,18 +17,21 @@
 
   <script type = "text/babel">
 
-  function Bloobs()  {
+  function Bloobs(props)  {
     const bloobs = {
-      backgroundColor: 'indigo'
+      backgroundColor: 'indigo',
+      height: '100%',
+      width: '100%'
     }
         return(
           <div style={bloobs}>
-            <Header/>
+            <Header name={props.name}/>
+            
           </div>
         );
   }
 
-    function Header() {
+    function Header(props) {
       const bloobsHeader = {
         left: 0,
         right: 0,
@@ -38,7 +41,17 @@
         backgroundColor: 'indigo'
       }
       return(
-        <h1>Bloobs. life's a fruit, pick it.</h1>)
+        <h1 style={bloobsHeader}>{props.name}</h1>
+      )
+    }
+
+    function SearchBar() {
+      const searchBar = {
+        
+      }
+      return(
+        <input type="text" className="searchTerm" placeholder="U-Pick"/>
+      )
     }
 
     function UPickButton() {
@@ -53,8 +66,8 @@
 
     ReactDOM.render(
       <div>
-        <Bloobs/>
-        <Header/>
+        <Bloobs name="Bloobs. life's a fruit, pick it."/>
+        <SearchBar/>
         <UPickButton/>
       </div>,
       document.getElementById("app")
