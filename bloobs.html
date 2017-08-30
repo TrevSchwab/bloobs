@@ -17,21 +17,28 @@
 
   <script type = "text/babel">
 
-  class Bloobs extends React.Component {
-      render() {
-        const bloobsHeader = {
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0,
-          textAlign: 'center',
-          background: 'indigo'
-
-        }
+  function Bloobs()  {
+    const bloobs = {
+      backgroundColor: 'indigo'
+    }
         return(
-          <h1 style={bloobsHeader}>Bloobs. life's a fruit, pick it.</h1>
+          <div style={bloobs}>
+            <Header/>
+          </div>
         );
+  }
+
+    function Header() {
+      const bloobsHeader = {
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        textAlign: 'center',
+        backgroundColor: 'indigo'
       }
+      return(
+        <h1>Bloobs. life's a fruit, pick it.</h1>)
     }
 
     function UPickButton() {
@@ -47,6 +54,7 @@
     ReactDOM.render(
       <div>
         <Bloobs/>
+        <Header/>
         <UPickButton/>
       </div>,
       document.getElementById("app")
