@@ -37,7 +37,7 @@
       backgroundColor: 'indigo',
       height: '100%',
       width: '100%',
-      textAlign: 'center'
+      display: 'block'
     }
         return(
           <div style={search}>
@@ -63,16 +63,17 @@
 
     function SearchBar() {
       const searchBar = {
-        
+  
       }
       return(
-        <input type="text" className="searchTerm" placeholder="U-Pick"/>
+        <input style={searchBar} type="text" className="searchTerm" placeholder="U-Pick"/>
       )
     }
 
     function UPickButton() {
       const buttonStyle = {
-        fontSize: 'large'
+        fontSize: 'large',
+        display: 'block'
       }
       return(
         <button style={buttonStyle}>U-Pick</button>
