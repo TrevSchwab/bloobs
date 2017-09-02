@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./reset.css">
   <!-- REACT LIBRARY -->
   <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
   <!-- REACT DOM LIBRARY -->
@@ -20,7 +21,7 @@
   function Bloobs(props)  {
     const bloobs = {
       backgroundColor: 'indigo',
-      height: '100%',
+      minHeight: '100vh',
       width: '100%',
       textAlign: 'center'
     }
@@ -37,7 +38,7 @@
       backgroundColor: 'indigo',
       height: '100%',
       width: '100%',
-      display: 'block'
+      display: 'inline'
     }
         return(
           <div style={search}>
@@ -73,7 +74,7 @@
     function UPickButton() {
       const buttonStyle = {
         fontSize: 'large',
-        display: 'block'
+        display: 'inline'
       }
       return(
         <button style={buttonStyle}>U-Pick</button>
