@@ -35,10 +35,7 @@
 
   function Search(props)  {
     const search = {
-      backgroundColor: 'indigo',
-      height: '100%',
-      width: '100%',
-      display: 'inline'
+      
     }
         return(
           <div style={search}>
@@ -50,12 +47,8 @@
 
     function Header(props) {
       const bloobsHeader = {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        textAlign: 'center',
-        backgroundColor: 'indigo'
+        fontSize: '56',
+        fontWeight: 'bold'
       }
       return(
         <h1 style={bloobsHeader}>{props.name}</h1>
@@ -74,7 +67,8 @@
     function UPickButton() {
       const buttonStyle = {
         fontSize: 'large',
-        display: 'inline'
+        display: 'block',
+        margin: 'auto'
       }
       return(
         <button style={buttonStyle}>U-Pick</button>
