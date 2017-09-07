@@ -11,6 +11,9 @@
   <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
   <!-- BABEL LIBRARY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  <!-- GOOGLE API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo"></script>
+
   <title>bloobs</title>
 </head>
 <body>
@@ -22,7 +25,7 @@
     const bloobs = {
       minHeight: '100vh',
       textAlign: 'center',
-      backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMT42YZR7fwQojhnYOIBDGznXjRt2v-WknMb9KWSVdCGjMgrhEw')"
+      //backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMT42YZR7fwQojhnYOIBDGznXjRt2v-WknMb9KWSVdCGjMgrhEw')"
     }
         return(
           <div style={bloobs}>
@@ -76,6 +79,10 @@
         <button style={buttonStyle}>U-Pick</button>
       );
     }
+
+
+
+    
 
     ReactDOM.render(
       <div>
