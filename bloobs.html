@@ -31,26 +31,25 @@
       minHeight: '30vh',
       textAlign: 'center'
     }
-        return(
-          <div style={bloobs}>
-            <Header name={props.name}/>
-            <Search/>
-            
-          </div>
-        );
+      return(
+        <div style={bloobs}>
+          <Header name={props.name}/>
+          <Search/>
+          
+        </div>
+      );
   }
 
-  function Search(props)  {
+    function Search(props)  {
     const search = {
-      
     }
-        return(
-          <div style={search}>
-            <SearchBar/>
-            <UPickButton/>
-          </div>
-        );
-  }
+      return(
+        <div style={search}>
+          <SearchBar/>
+          <UPickButton/>
+        </div>
+      );
+    }
 
     function Header(props) {
       const bloobsHeader = {
@@ -91,7 +90,7 @@
           lng: 0
         };
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 2,
+          zoom: 3,
           center: uluru
         });
         const marker = new google.maps.Marker({
@@ -104,10 +103,8 @@
             <div style={map}></div>
             <div style={marker}></div>
           </div>
-          
         );
-        
-      }
+    }
 
 
 
