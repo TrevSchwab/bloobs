@@ -21,35 +21,21 @@
 </head>
 <body>
   <div id="app">React has not rendered</div>
-  <div id="map"></div>
+  <div id="map">Map Div</div>
+  
 
   <script type = "text/babel">
 
-  function initMap() {
-        var uluru = {lat: 0, lng: 0};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-
-
-
-
   function Bloobs(props)  {
     const bloobs = {
-      minHeight: '100vh',
-      textAlign: 'center',
-      //backgroundImage: "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyMT42YZR7fwQojhnYOIBDGznXjRt2v-WknMb9KWSVdCGjMgrhEw')"
+      minHeight: '30vh',
+      textAlign: 'center'
     }
         return(
           <div style={bloobs}>
             <Header name={props.name}/>
             <Search/>
+            
           </div>
         );
   }
@@ -73,7 +59,7 @@
       }
       return(
         <h1 style={bloobsHeader}>{props.name}</h1>
-      )
+      );
     }
 
     function SearchBar() {
@@ -85,7 +71,7 @@
       }
       return(
         <input style={searchBar} type="text" className="searchTerm" placeholder="U-Pick"/>
-      )
+      );
     }
 
     function UPickButton() {
@@ -98,6 +84,30 @@
         <button style={buttonStyle}>U-Pick</button>
       );
     }
+
+    function initMap(props) {
+        const uluru = {
+          lat: 0, 
+          lng: 0
+        };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 2,
+          center: uluru
+        });
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        return(
+          <div>
+            <div style={uluru}></div>
+            <div style={map}></div>
+            <div style={marker}></div>
+          </div>
+          
+        );
+        
+      }
 
 
 
