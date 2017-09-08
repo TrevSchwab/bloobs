@@ -14,7 +14,7 @@
   <!-- BABEL LIBRARY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
   <!-- GOOGLE MAPS API -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1YWs8ujNHbvTtnOjnZaF6lMn1sW4wgc4&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1YWs8ujNHbvTtnOjnZaF6lMn1sW4wgc4&callback=initMap&libraries=places"></script>
 
   <title>bloobs</title>
 
@@ -62,6 +62,8 @@
       );
     }
 
+    
+
     function SearchBar() {
       const searchBar = {
         width: '35%',
@@ -69,10 +71,15 @@
         margin: '2%',
         fontSize: '2vw'
       }
+
+      const 
+
       return(
         <input style={searchBar} type="text" className="searchTerm" placeholder="U-Pick"/>
       );
     }
+
+    
 
     function UPickButton() {
       const buttonStyle = {
